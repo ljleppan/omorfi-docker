@@ -14,7 +14,7 @@ RUN echo "\nPREPARING\n" && \
     echo "deb http://apertium.projectjj.com/apt/nightly $(lsb_release -c | cut -f2) main" \
       | tee /etc/apt/sources.list.d/apertium-nightly.list && \
     apt-get update && \
-    apt-get install -y --no-install-recommends hfst libhfst49 python3-libhfst zip autoconf automake && \
+    apt-get install -y --no-install-recommends hfst libhfst python3-libhfst zip autoconf automake && \
     #
     #
     echo "\nFIXING HFST\n" && \
