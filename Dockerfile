@@ -14,12 +14,12 @@ RUN echo "\nPREPARING\n" && \
     echo "deb http://apertium.projectjj.com/apt/nightly $(lsb_release -c | cut -f2) main" \
       | tee /etc/apt/sources.list.d/apertium-nightly.list && \
     apt-get update && \
-    apt-get install -y --no-install-recommends hfst libhfst python3-libhfst zip autoconf automake && \
+    apt-get install -y --no-install-recommends hfst libhfst52 python3-libhfst zip autoconf automake && \
     #
     #
     echo "\nFIXING HFST\n" && \
     ls /usr/lib/python3/dist-packages/ && \
-    ln -s /usr/lib/python3/dist-packages/_libhfst.cpython-34m-x86_64-linux-gnu.so /usr/lib/python3/dist-packages/_libhfst.so && \
+    ln -s /usr/lib/python3/dist-packages/_libhfst.cpython-35m-x86_64-linux-gnu.so /usr/lib/python3/dist-packages/_libhfst.so && \
     #
     #
     echo "\nINSTALLING OMORFI\n" && \
